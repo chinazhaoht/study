@@ -29,7 +29,7 @@ public class LeaderLatchExample {
         TestingServer server = new TestingServer();
         try{
             for(int i = 0; i <CLIENT_QTY; ++i){
-                CuratorFramework client = CuratorFrameworkFactory.newClient(server.getConnectString(),new ExponentialBackoffRetry(1000,3));
+                CuratorFramework client = CuratorFrameworkFactory.newClient("120.27.127.2:2181",new ExponentialBackoffRetry(1000,3));
                 clients.add(client);
                 LeaderLatch example = new LeaderLatch(client,PATH,"Client #:"+i);
                 examples.add(example);

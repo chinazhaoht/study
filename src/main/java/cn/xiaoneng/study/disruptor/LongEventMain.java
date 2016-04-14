@@ -30,6 +30,7 @@ public class LongEventMain {
         for(long l = 0; true; l++){
             bb.putLong(0,l);
             producer.onData(bb);
+            System.out.println(ringBuffer.getBufferSize() - ringBuffer.remainingCapacity()+":"+ringBuffer.remainingCapacity());
            // Thread.sleep(1000);
         }
     }

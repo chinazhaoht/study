@@ -20,6 +20,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author zhaoht
  * @date 2016/3/24 18:37
+ * @version 0.1
  */
 
 public class MySource extends AbstractSource implements Configurable,PollableSource {
